@@ -49,6 +49,8 @@ function App() {
           <Route path='/character/:characterId' element={
             <CharacterDetail
               data={data}
+              selectedHouse={selectedHouse}
+              setSelectedHouse={setSelectedHouse}
             >
 
             </CharacterDetail>}></Route>

@@ -1,17 +1,33 @@
 import { useLocation, matchPath } from 'react-router-dom';
-import notfound1 from '../images/notfound1.png'
+import notfound1 from '../images/notfound1.png';
+import Gryffindor from '../images/Gryffindor.jpg'
+import Ravenclaw from '../images/Ravenclaw.jpg'
+import Slytherin from '../images/Slytherin.jpg'
+import Hufflepuff from '../images/Hufflepuff.jpg'
 
 
 
-function CharacterDetail({ data }) {
 
+function CharacterDetail({ data, selectedHouse }) {
+
+    //Emblema de la casa:
+    const houseBadge = () => {
+        if (selectedHouse === 'Gryffindor') {
+            return <img className="badge" src={Gryffindor} alt="Gryffindor emblem" />
+        } else if (selectedHouse === 'Ravenclaw') {
+            return <img className="badge" src={Ravenclaw} alt="Ravenclaw emblem" />
+        } else if (selectedHouse === 'Slytherin') {
+            return <img className="badge" src={Slytherin} alt="Slytherin emblem" />
+        } else if (selectedHouse === 'Hufflepuff') {
+            return <img className="badge" src={Hufflepuff} alt="Hufflepuff emblem" />
+        }
+    }
 
     // Si coincide, routeData es un objeto con mucha información útil
     // La información que me interesa está en routeData.params.id
     const { pathname } = useLocation();
     const routeData = matchPath('/character/:characterId', pathname);
     const characterId = routeData !== null ? routeData.params.characterId : '';
-
 
     const characterFound = data.find((character) => character.id === characterId);
 
@@ -31,6 +47,7 @@ function CharacterDetail({ data }) {
 
                     </div>
                 </div>
+                {houseBadge()}
             </div>
         );
     }
