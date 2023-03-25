@@ -22,12 +22,12 @@ function CharacterDetail({ data }) {
                     {characterFound.image ? <img className='detail-img' src={characterFound.image} alt={characterFound.name}></img> : <img className="detail-img" alt={characterFound.name} src={notfound1}></img>}
 
                     <div className="detail-box-text">
-                        <p>Name: {characterFound.name}</p>
-                        <p>House: {characterFound.house || "Desconocida"}</p>
-                        {characterFound.alive === true ? <p>Status: Alive 🖤</p> : <p>Status: Dead 💀</p>}
-                        <p>Gender: {characterFound.gender}</p>
-                        <p>Specie: {characterFound.species}</p>
-                        <p className="detail-box-text__alternate-names">Alternate names: {characterFound.alternate_names}</p>
+                        <p><span >Name: </span>{characterFound.name}</p>
+                        <p><span >House: </span>{characterFound.house || "Desconocida"}</p>
+                        {characterFound.alive === true ? <p><span>Status: </span>Alive 🖤</p> : <p><span>Status: </span>Dead 💀</p>}
+                        <p><span >Gender: </span>{characterFound.gender}</p>
+                        <p><span >Specie: </span>{characterFound.species}</p>
+                        <p><span >Alternate names: </span>{characterFound.alternate_names}</p>
 
                     </div>
                 </div>
