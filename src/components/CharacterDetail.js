@@ -5,9 +5,6 @@ import Ravenclaw from '../images/Ravenclaw.jpg'
 import Slytherin from '../images/Slytherin.jpg'
 import Hufflepuff from '../images/Hufflepuff.jpg'
 
-
-
-
 function CharacterDetail({ data, selectedHouse }) {
 
     //Emblema de la casa:
@@ -50,6 +47,10 @@ function CharacterDetail({ data, selectedHouse }) {
                 {houseBadge()}
             </div>
         );
+    } else {
+        return (
+            <p className="error-msg">This character does not exist</p>
+        )
     }
 }
 export default CharacterDetail;

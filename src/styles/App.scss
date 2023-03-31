@@ -134,6 +134,30 @@ body {
   }
 }
 
+.error-msg {
+  color: white;
+  font-family: $font;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 10rem;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(40px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
 .main-detail {
   display: flex;
   flex-direction: column;

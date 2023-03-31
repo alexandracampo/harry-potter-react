@@ -1,4 +1,5 @@
 const getDataFromApi = (house) => {
+
     const byHouse = house ? `/house/${house}` : '';
 
     return fetch(`https://hp-api.onrender.com/api/characters${byHouse}`)

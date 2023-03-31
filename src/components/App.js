@@ -14,10 +14,14 @@ function App() {
   const [selectedHouse, setSelectedHouse] = useState('Gryffindor');
 
   useEffect(() => {
-    getDataFromApi(selectedHouse).then((responseData) => {
-      //Aquí estoy metiendo los datos de la respuesta de la Api en variable data:
-      setData(responseData)
-    })
+    getDataFromApi(selectedHouse)
+      .then((responseData) => {
+        /*  Si queremos que aparezcan por orden alfabético:
+        responseData.sort((a, b) => a.name.localeCompare(b.name)); */
+
+        //Metemos los datos de la respuesta de la Api en variable data:
+        setData(responseData)
+      })
   }, [selectedHouse]);
 
 
