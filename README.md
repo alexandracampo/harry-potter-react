@@ -11,10 +11,8 @@ podemos filtrar por el nombre del personaje y por la casa a la que pertenecen.
 - Pintar y filtrar listados
 - Hooks (UseState, UseEffect)
 - Componentes
-- Router (Rutas dinámicas y estáticas)
 - Props
-- Router
-- Hooks
+- Router (Rutas dinámicas y estáticas)
 
 ### Herramientas utilizadas:
 
